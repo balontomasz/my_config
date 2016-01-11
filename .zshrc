@@ -106,3 +106,6 @@ alias vim='mvim -v'
 alias vmi='mvim -v'
 alias be='bundle exec '
 export PATH="$HOME/.node/bin:$PATH"
+
+export NVM_DIR="/Users/tomaszbalon/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
