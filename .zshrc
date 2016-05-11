@@ -43,7 +43,7 @@ ZSH_THEME="fwalch"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git rake-fast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,7 +105,14 @@ alias rc='rails console '
 alias vim='mvim -v'
 alias vmi='mvim -v'
 alias be='bundle exec '
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 export PATH="$HOME/.node/bin:$PATH"
 
 export NVM_DIR="/Users/tomaszbalon/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}

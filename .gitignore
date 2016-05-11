@@ -4,3 +4,4 @@ ctags
 .swp
 ctags
 .DS_Store
+.rake_tasks
