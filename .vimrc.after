@@ -22,3 +22,4 @@ let &colorcolumn="80,".join(range(400,999),",")
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:ctrlp_use_caching = 0
 set wildmode=longest,list
+:nnoremap <silent><expr> <space><cr> (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
