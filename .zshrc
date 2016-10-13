@@ -79,13 +79,13 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 alias textedit='open -a TextEdit'
 alias sub='open -a SublimeText2'
-alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias pg-start='pg_ctl -D /usr/local/var/postgres start'
+alias pg-stop='pg_ctl -D /usr/local/var/postgres stop'
 alias gb='git branch '
 alias gco='git checkout '
 alias gst='git status'
 alias ga='git add '
-alias gl='git log '
+alias gl='git log --graph'
 alias gdc='gd --cached '
 alias t='trash '
 
@@ -93,8 +93,8 @@ if [ -d "<path-to-sdk>/platform-tools" ] ; then
   export PATH="<path-to-sdk>/platform-tools:$PATH"
 fi
 
-export HOST=localhost
-export PORT=3000
+export HOST='localhost:3000'
+#export PORT=3000
 PATH=/opt/local/bin:$PATH
 alias grep='ag '
 
@@ -102,8 +102,14 @@ alias rials='rails '
 alias raisl='rails '
 alias rs='rails server '
 alias rc='rails console '
-alias vim='mvim -v'
-alias vmi='mvim -v'
+alias vim='nvim'
+alias vmi='nvim'
+alias pserver='mix phoenix.server'
+alias pconsole='iex -S mix phoenix.server'
+alias proutes='mix phoenix.routes'
+alias ec='mix ecto.create'
+alias em='mix ecto.migrate'
+alias ed='mix ecto.drop'
 alias be='bundle exec '
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 export PATH="$HOME/.node/bin:$PATH"
@@ -116,3 +122,9 @@ mkcd () {
   mkdir "$1"
   cd "$1"
 }
+
+# for nightwatch
+export LAUNCH_URL='http://localhost:3000'
+eval "$(thefuck --alias)"
+export EDITOR='nvim'
+export ANDROID_HOME=/usr/local/opt/android-sdk

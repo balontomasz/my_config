@@ -1,0 +1,4 @@
+neww 'server'
+new-window 'vim' -v 'vim'
+new-window 'console' -v 'rails c'
+neww 'zsh'
