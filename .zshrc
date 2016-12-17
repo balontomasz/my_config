@@ -111,6 +111,8 @@ alias ec='mix ecto.create'
 alias em='mix ecto.migrate'
 alias ed='mix ecto.drop'
 alias be='bundle exec '
+alias gpl='git pull '
+alias gpr='git pull --rebase'
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 export PATH="$HOME/.node/bin:$PATH"
 
