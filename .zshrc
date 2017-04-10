@@ -1,6 +1,5 @@
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
+source ~/.zsh_profile
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -114,6 +113,7 @@ alias be='bundle exec '
 alias gpl='git pull '
 alias gpr='git pull --rebase'
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
+alias ta='tmux a -t '
 export PATH="$HOME/.node/bin:$PATH"
 
 export NVM_DIR="/Users/tomaszbalon/.nvm"
@@ -125,8 +125,24 @@ mkcd () {
   cd "$1"
 }
 
+reload () {
+  cd .
+  echo "$(ruby -v)"
+
+  if [ "$1" = ":all" ]
+  then
+    echo "reloading zsh"
+    source ~/.zshrc
+  fi
+}
+
 # for nightwatch
 export LAUNCH_URL='http://localhost:3000'
 eval "$(thefuck --alias)"
 export EDITOR='nvim'
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+
+export LDFLAGS='-L/usr/local/opt/readline/lib'
+export CPPFLAGS='-I/usr/local/opt/readline/include'
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"

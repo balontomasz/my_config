@@ -6,3 +6,5 @@ ctags
 .DS_Store
 .rake_tasks
 .dump.rdb
+dump.rdb
+npm-debug.log
