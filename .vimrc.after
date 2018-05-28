@@ -17,8 +17,8 @@ set background=dark
 colorscheme solarized
 noremap <leader><leader> <c-^>
 noremap <space>fw :FixWhitespace<cr>
-let &colorcolumn=join(range(81,999),",")
-let &colorcolumn="80,".join(range(400,999),",")
+let &colorcolumn=join(range(101,999),",")
+let &colorcolumn="100,".join(range(400,999),",")
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:ctrlp_use_caching = 0
 set wildmode=longest,list
@@ -70,3 +70,5 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 com! FormatJSON %!python -m json.tool
+com! FormatXML %!xmllint --format -
+let ruby_no_expensive=1
