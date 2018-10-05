@@ -1,0 +1,1 @@
+/Users/tomaszbalon/.vim/janus/vim/vimrc

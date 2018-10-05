@@ -20,6 +20,7 @@ export PORT=3000
 
 # Custom Aliases
 alias textedit='open -a TextEdit'
+alias grepp='grep'
 alias sub='open -a SublimeText2'
 alias pg-start='pg_ctl -D /usr/local/var/postgres start'
 alias pg-stop='pg_ctl -D /usr/local/var/postgres stop'
@@ -50,6 +51,12 @@ alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 alias ta='tmux a -t '
 alias gfixup='git commit --amend --no-edit'
 
+unalias gsr
+
+port-check() {
+  lsof -i :"$1"
+}
+
 mkcd () {
   mkdir "$1"
   cd "$1"
@@ -78,8 +85,10 @@ export PATH=/Users/tomaszbalon/.local/bin:$PATH
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
 
+export BUNDLER_EDITOR='nvim'
+export EDITOR='nvim'
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
+eval "$(rbenv init -)"
