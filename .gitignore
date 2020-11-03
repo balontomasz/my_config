@@ -1,3 +1,4 @@
+.tern-port
 ctags
 .orig
 .swo
@@ -13,3 +14,9 @@ vim-markdown-preview.html
 tags
 .idea
 .passwords.dev
+.vscode/
+tags.temp
+tags.lock
+
+
+config/initializers/postgresql_adapter_monkeypatch.rb

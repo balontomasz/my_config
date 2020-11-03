@@ -12,23 +12,31 @@ if [ -d "<path-to-sdk>/platform-tools" ] ; then
 fi
 
 PATH=/opt/local/bin:$PATH
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.node/bin:$PATH"
+
+export LC_ALL=en_US.UTF-8
 
 
 export HOST='localhost'
 export PORT=3000
 
 # Custom Aliases
+unalias l
+alias l="exa -l -a -a --git --time-style=long-iso --group-directories-first"
 alias textedit='open -a TextEdit'
 alias grepp='grep'
 alias sub='open -a SublimeText2'
-alias pg-start='pg_ctl -D /usr/local/var/postgres start'
+alias pg-start='pg_ctl -D /usr/local/var/postgres/postgres start'
 alias pg-stop='pg_ctl -D /usr/local/var/postgres stop'
-alias gb='git branch '
+alias pg-fix='rm -f /usr/local/var/postgres/postmaster.pid'
+alias gb='git --no-pager branch '
 alias gco='git checkout '
 alias gst='git status'
 alias ga='git add '
 alias gl='git log --graph'
+unalias glo
+alias glo='gl --oneline'
 alias gdc='gd --cached '
 alias t='trash '
 alias grep='ag '
@@ -44,12 +52,15 @@ alias proutes='mix phx.routes'
 alias ec='mix ecto.create'
 alias em='mix ecto.migrate'
 alias ed='mix ecto.drop'
+alias mixc="iex -S mix"
 alias be='bundle exec '
 alias gpl='git pull '
 alias gpr='git pull --rebase'
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 alias ta='tmux a -t '
 alias gfixup='git commit --amend --no-edit'
+alias heroku-account='heroku accounts:set'
+alias replace='rpl -R'
 
 unalias gsr
 
@@ -84,6 +95,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=/Users/tomaszbalon/.local/bin:$PATH
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
+
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 export BUNDLER_EDITOR='nvim'
 export EDITOR='nvim'
