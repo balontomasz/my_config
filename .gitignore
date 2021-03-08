@@ -18,5 +18,8 @@ tags
 tags.temp
 tags.lock
 
+.projections.json
+
+
 
 config/initializers/postgresql_adapter_monkeypatch.rb
